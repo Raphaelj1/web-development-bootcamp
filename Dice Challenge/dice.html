@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dice Challenge</title>
+		<style></style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Play Game!</h1>
+			<div>
+				<button id="spinBtn">Spin</button>
+			</div>
+
+			<div class="dice">
+				<p>Player 1</p>
+				<img src="images/Dice6.png" alt="" class="dice1" />
+			</div>
+
+			<div class="dice">
+				<p>Player 2</p>
+				<img src="images/Dice6.png" alt="" class="dice2" />
+			</div>
+		</div>
+
+		<script>
+            // Dom elements
+			const spinBtn = document.getElementById('spinBtn');
+			const dice1 = document.querySelector('.dice1');
+			const dice2 = document.querySelector('.dice2');
+			const heading = document.querySelector('h1');
+
+			function spinDice() {
+				const randomNumber1 = randomDiceNumber();
+				const randomNumber2 = randomDiceNumber();
+				const randomDiceImage1 = `images/Dice${randomNumber1}.png`;
+				const randomDiceImage2 = `images/Dice${randomNumber2}.png`;
+				dice1.setAttribute('src', randomDiceImage1);
+				dice2.setAttribute('src', randomDiceImage2);
+
+				if (randomNumber1 > randomNumber2) {
+					heading.textContent = 'Player 1 wins!';
+				} else if (randomNumber1 < randomNumber2) {
+					heading.textContent = 'Player 2 wins!';
+				} else {
+					heading.textContent = 'Draw!';
+				}
+			}
+
+			function randomDiceNumber() {
+				return Math.floor(Math.random() * 6) + 1;
+			}
+
+			spinBtn.addEventListener('click', spinDice, false);
+		</script>
+	</body>
+</html>
