@@ -1,24 +1,50 @@
 .set {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .drum {
-    font-size: 24px;
-    padding: 32px 40px;
-    background-color: white;
-    border: 2px solid #333;
-    border-radius: 6px;
+	font-size: 24px;
+	padding: 40px 48px;
+	background-color: white;
+	border: 2px solid #333;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.drum:hover {
+	background-color: #ffcaca;
 }
 
 .drum:active {
-    color: #fff;
-    background-color: #333;
+	color: #fff;
+	background-color: #333;
 }
 
 h1 {
-    text-align: center;
-    margin: 48px 0;
+	text-align: center;
+	margin: 48px 0;
+}
+
+.w {
+}
+
+.a {
+}
+
+.s {
+}
+
+.d {
+}
+
+.j {
+}
+
+.k {
+}
+
+.l {
 }
