@@ -1,0 +1,94 @@
+You add the script tag (CDN preferably)
+$ is short for jQuery
+Use 
+$(document).ready(function () {
+
+});
+
+This will run only when our document has finished loading.
+
+$("button").click(function () {
+
+});
+This is same as using document.querySelector("button").addEventListener("click", …);
+
+Either you add the script tag right before the html body closing tag or in the head part of the html. The script should be before your own js file.
+
+
+
+$("h1").css("color", "red");
+Set h1 color to red
+
+$("h1").css("color");
+To get the css property
+
+$("h1").addClass("classname");
+$("h1").addClass("classname another-class");
+$("h1").removeClass("classname");
+$("h1").hasClass("classname "); //returns boolean
+
+To change text
+---------------
+$("h1").text("text");
+$("h1").html("<tag></tag>"); // same as innerHTML
+
+
+To change attributes 
+---------------
+$("img").attr("src"); // get
+$("img").attr("src", "location"); // set
+
+
+To add event listeners
+---------------
+$("h1").click(function() {});
+$("document").keypress(function(event) {});
+$("h1").on("mouseOver", function() {});
+
+
+To minify js or css
+minifier.org
+
+
+Adding elements
+---------------
+$("h1").before("<button>Click Me!</button>")
+Adds an element before the selected element
+
+$("h1").after("<button>Click Me!</button>")
+Adds an element after the selected element
+
+
+$("h1").prepend("<button>Click Me!</button>")
+Adds an element into the selected element after the opening tag
+
+$("h1").append("<button>Click Me!</button>")
+Adds an element into the selected element before the closing tag
+
+
+
+
+Animations
+----------
+$("h1").hide()
+This will hide h1 element
+$("h1").show()
+$("h1").toggle()
+
+$("h1").fadeOut()
+$("h1").fadeIn()
+$("h1").fadeToggle()
+
+$("h1").slideUp()
+$("h1").slideDown()
+$("h1").slideToggle()
+
+To define a custom css you want to animate
+$("h1").animate({ opacity: 0.5})
+// In animate, you only animate properties that are numbers
+// To animate margin, you make it a string "20px"
+
+Chaining Animations
+-------------------
+$("h1").slideUp().slideDown().animate({ opacity: 0.5})
+
