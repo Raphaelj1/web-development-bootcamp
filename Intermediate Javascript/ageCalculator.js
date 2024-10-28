@@ -4,6 +4,7 @@ function calcDays(age, ageTarget = 30) {
     const monthsRemaining = yearsRemaining * 12;
     const weeksRemaining = yearsRemaining * 56;
     const daysRemaining = yearsRemaining * 365;
+    
     console.log(`You have ${yearsRemaining} years left till ${ageTarget}`);
     console.log(`You have ${monthsRemaining} months left till ${ageTarget}`);
     console.log(`You have ${weeksRemaining} weeks left till ${ageTarget}`);
